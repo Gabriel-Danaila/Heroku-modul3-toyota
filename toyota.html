@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriel Danaila</title>
+
+    <!-- Links for google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Required Core Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+
+    <!-- Optional Theme Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
+    />
+    <!-- Link to your main stylesheet.   -->
+    <link rel="stylesheet" type="text/css" href="css/toyota.css" />
+
+    <!--  Link to the favicon for your webpage.-->
+    <link rel="icon" href="img/LogoFavicon.svg" />
+
+    <!-- Link to your custom JavaScript file -->
+
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script defer src="js/toyota.js"></script>
+  </head>
+  <body>
+    <header class="header" id="home">
+      <nav class="navbar" id="navbar">
+        <div class="navbar-logo">
+          <svg
+            width="105"
+            height="45"
+            viewBox="25 -3 41 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="91" fill="#FFFFFF" />
+            <g id="Union 1">
+              <path
+                id="Vector"
+                d="M50 3C47.8 1.8 45 1.3 41.6 1.3H30.9L30.8 1.8L31.4 2.1C32.5 2.6 32.9001 3.5 32.7001 4.8C32.4001 6.7 32 8.6 31.7001 10.6C31.3001 12.6 31 14.5 30.7001 16.2L30.6 17H16V19C18.6 19 19.9 20.2 19.6 22.4C19.5 23.3 19.3001 24.3 19.2001 25.3C19 26.6 18.8001 27.8 18.6 28.9L18.3 30.4C18.1 31.4 17.8 32.1 17.3 32.4C16.8 32.7 16.2 32.9 15.3 32.9C13.8 32.9 12.4 32.4 11.2 31.4C10 30.4 9.00005 28.9 8.30005 27C7.60005 25 7.20005 22.7 7.20005 20C7.20005 16.4 7.70005 13.2 8.80005 10.4C9.90005 7.6 11.3 5.4 13.2 3.8C15.1 2.2 17.3001 1.4 19.7001 1.4C21.3001 1.4 22.5 1.7 23.2001 2.3C23.9001 2.9 24.6 3.9 25.1 5.4L26.9 10.4H27.4L28.6 2.9C25.7001 1.3 22.6 0.5 19.2001 0.5C16.5 0.5 14 1 11.7 2C9.40005 3 7.40005 4.3 5.70005 6.1C4.00005 7.9 2.70005 9.9 1.70005 12.3C0.800049 14.6 0.300049 17.2 0.300049 19.9C0.300049 24.3 1.60005 27.8 4.20005 30.2C6.80005 32.6 10.5 33.8 15.1 33.8C17 33.8 18.6 33.6 20 33.2C21.4 32.8 22.9 32.4 24.3 31.8L26.1 22.1C26.3001 20.9 26.8001 19 30.1 19L28.1 29.4C28 30.1 27.7 30.7 27.4 31.1C27 31.5 26.6 31.9 25.9 32.2L25.1 32.5V33H37.4001C40 33 42.5 32.6 44.8 31.8C47.1 31 49.2001 29.8 50.9001 28.2C52.7001 26.6 54.1 24.7 55.1 22.4C56.1 20.1 56.6 17.6 56.6 14.7C56.6 12.1 56 9.9 54.9001 7.8C53.9001 5.8 52.2001 4.2 50 3ZM48.2001 23.4C47.2001 26.1 45.7001 28.2 43.8 29.7C41.9 31.2 39.5 32 36.8 32H34.4001C34.8001 29.7 35.1 27.4 35.6 25C36 23 36.4001 20.9 36.7001 18.9H45V16.9H37L39.8 2.2H41.1C43.9 2.3 46.1 3.4 47.6 5.3C49.1 7.2 49.8 10.2 49.8 14.1C49.8 17.7 49.3 20.7 48.2001 23.4Z"
+                fill="black"
+              />
+            </g>
+          </svg>
+        </div>
+        <ul class="navbar-list" role="list">
+          <li>
+            <a href="index.html#projects"> Projects </a>
+          </li>
+          <li>
+            <a href="index.html#skills "> Skills </a>
+          </li>
+          <li>
+            <a href="index.html#contact"> Contact </a>
+          </li>
+        </ul>
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+    <div class="full-screen">
+      <section class="toyota-carousel">
+        <div class="container-left">
+          <div class="glide-left">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide">
+                  <img
+                    class="img1"
+                    src="img/toyota_1.png"
+                    alt="toyota Image 1"
+                  />
+                </li>
+
+                <li class="glide__slide">
+                  <img
+                    class="img2"
+                    src="img/toyota_2.png"
+                    alt="toyota Image 2"
+                  />
+                </li>
+
+                <li class="glide__slide">
+                  <img
+                    class="img3"
+                    src="img/toyota_3.png"
+                    alt="toyota Image 3"
+                  />
+                </li>
+
+                <li class="glide__slide">
+                  <img
+                    class="img4"
+                    src="img/toyota_4.png"
+                    alt="toyota Image 4"
+                  />
+                </li>
+
+                <li class="glide__slide">
+                  <img
+                    class="img5"
+                    src="img/toyota_5.png"
+                    alt="toyota Image 5"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="main-sgv-container">
+            <div class="main-sgv-carusel-bullet">
+              <div id="svg-container1">
+                <svg
+                  id="animated-svg1"
+                  class="button-svg-anim"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    id="animated-circle1"
+                    class="button-svg-anim-circle"
+                    opacity=".5"
+                    cx="15"
+                    cy="15"
+                    fill="#000000"
+                    r="3"
+                    style="opacity: 1"
+                  ></circle>
+                  <g
+                    id="animated-group1"
+                    class="button-svg-anim-scale"
+                    transform="matrix(1,0,0,1,0,0)"
+                    style="transform-origin: 15px 15px"
+                  >
+                    <path
+                      id="animated-path5"
+                      class="button-svg-anim-path"
+                      d="
+                          M 7.75 15
+                          A 7.25 7.25 0 0 1 15 7.75
+                          L 15 7.75
+                          A 7.25 7.25 0 0 1 22.25 15
+                          A 7.25 7.25 0 0 1 15 22.25
+                          L 15 22.25
+                          A 7.25 7.25 0 0 1 7.75 15
+                      "
+                      stroke-dasharray="45.553 45.553"
+                      stroke-dashoffset="45.553"
+                      stroke="#000000"
+                      stroke-width="1.5"
+                      stroke-linecap="square"
+                      stroke-linejoin="round"
+                      fill="transparent"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="main-sgv-carusel-bullet">
+              <div id="svg-container2">
+                <svg
+                  id="animated-svg2"
+                  class="button-svg-anim"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    id="animated-circle2"
+                    class="button-svg-anim-circle"
+                    opacity=".5"
+                    cx="15"
+                    cy="15"
+                    fill="#000000"
+                    r="3"
+                    style="opacity: 1"
+                  ></circle>
+                  <g
+                    id="animated-group2"
+                    class="button-svg-anim-scale"
+                    transform="matrix(1,0,0,1,0,0)"
+                    style="transform-origin: 15px 15px"
+                  >
+                    <path
+                      id="animated-path5"
+                      class="button-svg-anim-path"
+                      d="
+                          M 7.75 15
+                          A 7.25 7.25 0 0 1 15 7.75
+                          L 15 7.75
+                          A 7.25 7.25 0 0 1 22.25 15
+                          A 7.25 7.25 0 0 1 15 22.25
+                          L 15 22.25
+                          A 7.25 7.25 0 0 1 7.75 15
+                      "
+                      stroke-dasharray="45.553 45.553"
+                      stroke-dashoffset="45.553"
+                      stroke="#000000"
+                      stroke-width="1.5"
+                      stroke-linecap="square"
+                      stroke-linejoin="round"
+                      fill="transparent"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="main-sgv-carusel-bullet">
+              <div id="svg-container3">
+                <svg
+                  id="animated-svg3"
+                  class="button-svg-anim"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    id="animated-circle3"
+                    class="button-svg-anim-circle"
+                    opacity=".5"
+                    cx="15"
+                    cy="15"
+                    fill="#000000"
+                    r="3"
+                    style="opacity: 1"
+                  ></circle>
+                  <g
+                    id="animated-group3"
+                    class="button-svg-anim-scale"
+                    transform="matrix(1,0,0,1,0,0)"
+                    style="transform-origin: 15px 15px"
+                  >
+                    <path
+                      id="animated-path5"
+                      class="button-svg-anim-path"
+                      d="
+                          M 7.75 15
+                          A 7.25 7.25 0 0 1 15 7.75
+                          L 15 7.75
+                          A 7.25 7.25 0 0 1 22.25 15
+                          A 7.25 7.25 0 0 1 15 22.25
+                          L 15 22.25
+                          A 7.25 7.25 0 0 1 7.75 15
+                      "
+                      stroke-dasharray="45.553 45.553"
+                      stroke-dashoffset="45.553"
+                      stroke="#000000"
+                      stroke-width="1.5"
+                      stroke-linecap="square"
+                      stroke-linejoin="round"
+                      fill="transparent"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="main-sgv-carusel-bullet">
+              <div id="svg-container4">
+                <svg
+                  id="animated-svg4"
+                  class="button-svg-anim"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    id="animated-circle4"
+                    class="button-svg-anim-circle"
+                    opacity=".5"
+                    cx="15"
+                    cy="15"
+                    fill="#000000"
+                    r="3"
+                    style="opacity: 1"
+                  ></circle>
+                  <g
+                    id="animated-group4"
+                    class="button-svg-anim-scale"
+                    transform="matrix(1,0,0,1,0,0)"
+                    style="transform-origin: 15px 15px"
+                  >
+                    <path
+                      id="animated-path5"
+                      class="button-svg-anim-path"
+                      d="
+                          M 7.75 15
+                          A 7.25 7.25 0 0 1 15 7.75
+                          L 15 7.75
+                          A 7.25 7.25 0 0 1 22.25 15
+                          A 7.25 7.25 0 0 1 15 22.25
+                          L 15 22.25
+                          A 7.25 7.25 0 0 1 7.75 15
+                      "
+                      stroke-dasharray="45.553 45.553"
+                      stroke-dashoffset="45.553"
+                      stroke="#000000"
+                      stroke-width="1.5"
+                      stroke-linecap="square"
+                      stroke-linejoin="round"
+                      fill="transparent"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="main-sgv-carusel-bullet">
+              <div id="svg-container5">
+                <svg
+                  id="animated-svg5"
+                  class="button-svg-anim"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    id="animated-circle5"
+                    class="button-svg-anim-circle"
+                    opacity=".5"
+                    cx="15"
+                    cy="15"
+                    fill="#000000"
+                    r="3"
+                    style="opacity: 1"
+                  ></circle>
+                  <g
+                    id="animated-group5"
+                    class="button-svg-anim-scale"
+                    transform="matrix(1,0,0,1,0,0)"
+                    style="transform-origin: 15px 15px"
+                  >
+                    <path
+                      id="animated-path5"
+                      class="button-svg-anim-path"
+                      d="
+                          M 7.75 15
+                          A 7.25 7.25 0 0 1 15 7.75
+                          L 15 7.75
+                          A 7.25 7.25 0 0 1 22.25 15
+                          A 7.25 7.25 0 0 1 15 22.25
+                          L 15 22.25
+                          A 7.25 7.25 0 0 1 7.75 15
+                      "
+                      stroke-dasharray="45.553 45.553"
+                      stroke-dashoffset="45.553"
+                      stroke="#000000"
+                      stroke-width="1.5"
+                      stroke-linecap="square"
+                      stroke-linejoin="round"
+                      fill="transparent"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-middle">
+          <div class="glide-middle">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide">
+                  <div class="content">
+                    <p class="content-title">Drive like you always have</p>
+                    <p class="content-text">
+                      The Toyota C-HR offers the versatility to drive using
+                      either electric energy or a combination of petrol and
+                      electric power to fully optimise performance, meaning you
+                      can drive the way you always have.
+                    </p>
+                    <button class="button-text">More about Hybrid</button>
+                  </div>
+                </li>
+
+                <li class="glide__slide">
+                  <div class="content">
+                    <p class="content-title">Saving fuel and money</p>
+                    <p class="content-text">
+                      Our research shows that Toyota Hybrids like the Toyota
+                      C-HR can save you money by using less fuel through the use
+                      of the electric motor. Business users can save too, with
+                      reduced BIK contributions.
+                    </p>
+                    <button class="button-text">
+                      Discover the power of hybrid electric
+                    </button>
+                  </div>
+                </li>
+
+                <li class="glide__slide">
+                  <div class="content">
+                    <p class="content-title">The right car for you</p>
+                    <p class="content-text">
+                      We understand that deciding the on the right fuel type for
+                      your new car can be tricky, which is why we have created a
+                      helpful tool for you to explore the difference.
+                    </p>
+                    <button class="button-text">Help me choose</button>
+                  </div>
+                </li>
+
+                <li class="glide__slide">
+                  <div class="content">
+                    <p class="content-title">Adaptive Cruise Control</p>
+                    <p class="content-text">
+                      This feature will keep you at a minimum pre-set distance
+                      from the vehicle in front. Should the distance reduce, the
+                      system gradually slows your car down and eventually the
+                      brakes will be applied if necessary. If the distance
+                      increases again, the car will gradually accelerate until
+                      you return to your chosen cruising speed
+                    </p>
+                    <button class="button-text">
+                      More about Toyota Safety Sense
+                    </button>
+                  </div>
+                </li>
+
+                <li class="glide__slide">
+                  <div class="content">
+                    <p class="content-title">
+                      Pre-Collision System with Pedestrian Detection
+                    </p>
+                    <p class="content-text">
+                      When the possibility of collision with either a cyclist or
+                      pedestrian is detected the driver is alerted with audio
+                      and visual warnings and brake assistance is activated, if
+                      necessary the brakes are engaged automatically.
+                    </p>
+                    <button class="button-text">
+                      More about Toyota Safety Sense
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-right">
+          <div class="glide-right">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide">
+                  <div class="img-container-right">
+                    <img
+                      class="img2"
+                      src="img/toyota_2.png"
+                      alt="toyota Image 2"
+                    />
+                  </div>
+                </li>
+
+                <li class="glide__slide">
+                  <div class="img-container-right">
+                    <img
+                      class="img3"
+                      src="img/toyota_3.png"
+                      alt="toyota Image 3"
+                    />
+                  </div>
+                </li>
+
+                <li class="glide__slide">
+                  <div class="img-container-right">
+                    <img
+                      class="img4"
+                      src="img/toyota_4.png"
+                      alt="toyota Image 4"
+                    />
+                  </div>
+                </li>
+
+                <li class="glide__slide">
+                  <div class="img-container-right">
+                    <img
+                      class="img5"
+                      src="img/toyota_5.png"
+                      alt="toyota Image 5"
+                    />
+                  </div>
+                </li>
+
+                <li class="glide__slide">
+                  <div class="img-container-right">
+                    <img
+                      class="img1"
+                      src="img/toyota_1.png"
+                      alt="toyota Image 1"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+          prev
+        </button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+          next
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
