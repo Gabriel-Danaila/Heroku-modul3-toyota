@@ -222,6 +222,8 @@ select {
 
 /** == == == == ==     3. Carousel    == == == == == **/
 
+
+
 .toyota-carousel {
     display: flex;
     justify-content: space-between;
@@ -231,12 +233,11 @@ select {
 
 
 .container-left {
-    width: 792px;
-    height: 500px;
+    max-width: 792px;
 }
 
 .container-left img {
-    width: 792px;
+    width: 100%;
     height: 500px;
     object-fit: cover;
 }
@@ -268,14 +269,15 @@ select {
     border: none;
 }
 
+
+
 .container-right {
     margin-top: 100px;
-    width: 120px;
-    height: 400px;
+    max-width: 120px;
 }
 
 .container-right img {
-    width: 120px;
+    width: 100%;
     height: 400px;
     object-fit: cover;
     overflow: hidden;
@@ -283,11 +285,8 @@ select {
 }
 
 
-.container-left,
-.container-middle,
-.container-right {
-    display: inline-block;
-}
+
+
 
 
 .container-left * {
@@ -391,7 +390,9 @@ select {
 
     .toyota-carousel {
         flex-direction: column;
-        gap: 50px
+        justify-content: center;
+        gap: 50px;
+
     }
 
 
@@ -399,12 +400,16 @@ select {
         display: none;
     }
 
+    .container-middle {
+        margin: 0;
+        padding: 1rem 1rem 3rem;
+    }
+
     .container-left * {
         cursor: default
     }
 
     .main-sgv-container {
-
         justify-content: center;
     }
 
