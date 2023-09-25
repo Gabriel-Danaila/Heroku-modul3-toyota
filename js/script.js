@@ -64,7 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
     type: "carousel",
     startAt: 0,
     perView: 1,
-    animationDuration: 2000,
+    animationDuration: 2500,
+    gap: 0,
   };
 
   let glideLeft = new Glide(".glide-left", glideOptions);
@@ -79,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
       glideLeft.go(">");
       glideMiddle.go(">");
       glideRight.go(">");
-    }, 2000);
+    }, 2500);
   }
 
   // Custom function to stop autoplay
@@ -120,13 +121,34 @@ document.addEventListener("DOMContentLoaded", function () {
     // Logic to stop or reset SVG animation, if needed
   });
 
+  glideMiddle.on("run.before", function () {
+    const currentSlideElement = document.querySelector(
+      ".glide-middle .glide__slide--active .content"
+    );
+
+    // Add fade-out effect to the text
+    if (currentSlideElement) {
+      currentSlideElement.classList.add("fade-out-text");
+    }
+  });
+
+  glideMiddle.on("run.after", function () {
+    // Remove the fade-out effect after the slide transitions
+    const previousSlideElement = document.querySelector(
+      ".glide-middle .fade-out-text"
+    );
+
+    if (previousSlideElement) {
+      previousSlideElement.classList.remove("fade-out-text");
+    }
+  });
+
   const glideSlidesLeft = document.querySelector(
     ".container-left .glide__slides"
   );
   const glideSlidesRight = document.querySelector(
     ".container-right .glide__slides"
   );
-
   glideSlidesRight.addEventListener("click", function () {
     handleManualSlide(">");
   });

@@ -248,6 +248,10 @@ select {
     margin: 95px 64px;
 }
 
+.content {
+    padding-left: 1px
+}
+
 .content-title {
     font-size: var(--fs-32);
     line-height: 40px;
@@ -317,7 +321,6 @@ select {
 .main-sgv-carusel-bullet {
     position: relative;
     top: 40px;
-    margin-right: 16px;
 
 }
 
@@ -384,9 +387,40 @@ select {
 }
 
 .button-svg-anim-path.start-anim {
-    animation: draw 3s linear forwards, scaleDown .5s 3s ease-in-out forwards, fadeOut 1s 3s ease-in-out forwards;
+    animation: draw 3.5s linear forwards, scaleDown .5s 3.5s ease-in-out forwards, fadeOut 1s 3.5s ease-in-out forwards;
     transform-origin: 50% 50%;
 }
+
+
+.fade-in-text {
+    animation: fadeInText 3s ease-in-out forwards;
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.fade-out-text {
+    animation: fadeOutText .3s ease-in-out forwards;
+}
+
+@keyframes fadeOutText {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
 
 @keyframes spin {
     0% {
