@@ -164,3 +164,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("resize", debouncedHandleResize);
 });
+
+//remove loader overlay when page is fully loaded
+window.addEventListener("load", function () {
+  const loader = document.getElementById("loader-overlay");
+  loader.style.display = "none";
+});

@@ -19,6 +19,8 @@
       rel="stylesheet"
       href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
     />
+    <!-- preload first img for improvment on lower network speed -->
+    <link rel="preload" href="img/toyota_1.png" as="image" />
 
     <!-- Optional Theme Stylesheet -->
     <link
@@ -87,6 +89,7 @@
                   <img
                     class="img1"
                     src="img/toyota_1.png"
+                    loading="lazy"
                     alt="toyota Image 1"
                   />
                 </li>
@@ -95,6 +98,7 @@
                   <img
                     class="img2"
                     src="img/toyota_2.png"
+                    loading="lazy"
                     alt="toyota Image 2"
                   />
                 </li>
@@ -111,6 +115,7 @@
                   <img
                     class="img4"
                     src="img/toyota_4.png"
+                    loading="lazy"
                     alt="toyota Image 4"
                   />
                 </li>
@@ -119,6 +124,7 @@
                   <img
                     class="img5"
                     src="img/toyota_5.png"
+                    loading="lazy"
                     alt="toyota Image 5"
                   />
                 </li>
@@ -529,6 +535,10 @@
           next
         </button>
       </div>
+    </div>
+
+    <div id="loader-overlay" class="loader-overlay">
+      <div class="loader"></div>
     </div>
   </body>
 </html>
