@@ -117,18 +117,64 @@ document.addEventListener("DOMContentLoaded", function () {
     setActiveCircle(glideLeft.index);
   });
 
-  glideLeft.on("run.after", function () {
-    // Logic to stop or reset SVG animation, if needed
-  });
+  // glideMiddle.on("run.before", function () {
+  //   const currentSlideElement = document.querySelector(
+  //     ".glide-middle .glide__slide--active .content"
+  //   );
+
+  //   // Add fade-out effect to the text
+  //   if (currentSlideElement) {
+  //     currentSlideElement.classList.add("fade-out-text");
+  //   }
+  // });
+
+  // glideMiddle.on("run.after", function () {
+  //   // Remove the fade-out effect after the slide transitions
+  //   const previousSlideElement = document.querySelector(
+  //     ".glide-middle .fade-out-text"
+  //   );
+
+  //   if (previousSlideElement) {
+  //     previousSlideElement.classList.remove("fade-out-text");
+  //   }
+  // });
+  // Existing code for fade-out
 
   glideMiddle.on("run.before", function () {
-    const currentSlideElement = document.querySelector(
-      ".glide-middle .glide__slide--active .content"
-    );
+    // Query all slides
+    const slides = document.querySelectorAll(".glide-middle .glide__slide");
+    let currentSlideIndex = -1;
 
-    // Add fade-out effect to the text
+    // Find the index of the current active slide
+    slides.forEach((slide, index) => {
+      if (slide.classList.contains("glide__slide--active")) {
+        currentSlideIndex = index;
+      }
+    });
+
+    // Calculate the index of the next slide
+    let nextSlideIndex = (currentSlideIndex + 1) % slides.length;
+
+    // Target the content divs in current and next slides
+    const currentSlideElement =
+      slides[currentSlideIndex].querySelector(".content");
+    const upcomingSlideElement =
+      slides[nextSlideIndex].querySelector(".content");
+
+    // Add fade-out effect to the current slide's content
     if (currentSlideElement) {
       currentSlideElement.classList.add("fade-out-text");
+    }
+
+    // Remove any old fade-in classes from previous slides
+    const oldFadeInElements = document.querySelectorAll(
+      ".glide-middle .fade-in-text"
+    );
+    oldFadeInElements.forEach((el) => el.classList.remove("fade-in-text"));
+
+    // Add fade-in effect to the upcoming slide's content
+    if (upcomingSlideElement) {
+      upcomingSlideElement.classList.add("fade-in-text");
     }
   });
 
@@ -140,6 +186,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (previousSlideElement) {
       previousSlideElement.classList.remove("fade-out-text");
+    }
+
+    // Remove the fade-in effect from the current slide to reset its state
+    const currentSlideElement = document.querySelector(
+      ".glide-middle .glide__slide--active .content"
+    );
+
+    if (currentSlideElement) {
+      currentSlideElement.classList.remove("fade-in-text");
     }
   });
 

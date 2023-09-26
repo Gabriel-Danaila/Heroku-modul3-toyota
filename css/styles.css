@@ -393,7 +393,7 @@ select {
 
 
 .fade-in-text {
-    animation: fadeInText 3s ease-in-out forwards;
+    animation: fadeInText 2s ease-in-out forwards;
 }
 
 @keyframes fadeInText {
@@ -421,7 +421,7 @@ select {
     }
 }
 
-
+/* loader overlay spin */
 @keyframes spin {
     0% {
         transform: rotate(0deg);
