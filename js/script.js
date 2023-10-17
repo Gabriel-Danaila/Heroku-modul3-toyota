@@ -243,7 +243,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //remove loader overlay when page is fully loaded
+// window.addEventListener("load", function () {
+//   const loader = document.getElementById("loader-overlay");
+//   loader.style.display = "none";
+// });
+
 window.addEventListener("load", function () {
   const loader = document.getElementById("loader-overlay");
-  loader.style.display = "none";
+  // Add a 2-second delay (2000 milliseconds) before hiding the loader
+  setTimeout(function () {
+    loader.style.display = "none";
+  }, 2000);
 });

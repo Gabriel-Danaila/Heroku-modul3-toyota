@@ -1,30 +1,21 @@
 /* Author: Gabriel Danaila
 version: 1.0.0
 Copyright: 2023 */
-
 /* ===================================
-
 0. Root variables and minim reset
 1. Header 
 2. Hamburger menu 
 3. Carousel
 4. Animation
 5. @media query
-  
 ======================================== */
-
-
 /** == == == == ==     0. Root variables and minim reset    == == == == == **/
-
-
 :root {
     --ff-primary: "Roboto";
     --ff-secondary: "DM Serif Display";
-
     --fw-light: 300;
     --fw-regular: 400;
     --fw-bold: 700;
-
     --fs-12: .75rem;
     --fs-16: 1rem;
     --fs-18: 1.125rem;
@@ -33,13 +24,11 @@ Copyright: 2023 */
     --fs-32: 2rem;
     --fs-48: 3rem;
     --fs-64: 4rem;
-
     --clr-text-primary: #000000;
     --clr-text-secondary: #ffffff;
     --clr-background-main: #f5f4f0;
     --clr-background-btn: #454545;
     --clr-borders: #686868;
-
 }
 
 *,
@@ -56,7 +45,6 @@ html {
     box-sizing: border-box;
     overflow: auto;
     scroll-behavior: smooth;
-
 }
 
 body {
@@ -69,8 +57,6 @@ body {
     max-width: 1500px;
     margin: 0 auto;
 }
-
-
 
 img,
 object,
@@ -91,13 +77,11 @@ a:active {
     background: transparent;
     text-decoration: none;
     color: inherit;
-
 }
 
 ul[role="list"] {
     list-style: none;
 }
-
 
 input,
 button,
@@ -107,10 +91,8 @@ select {
 }
 
 /** == == == == ==     1. Header   == == == == == **/
-
 .header {
     background-color: var(--clr-background-main);
-
     padding: 2.5em 4em;
     z-index: 10;
 }
@@ -170,7 +152,6 @@ select {
     position: absolute;
     top: 30px;
     right: 16px;
-
 }
 
 .hamburger span {
@@ -222,16 +203,12 @@ select {
 }
 
 /** == == == == ==     3. Carousel    == == == == == **/
-
-
-
 .toyota-carousel {
     display: flex;
     justify-content: space-between;
     background-color: var(--clr-background-main);
     padding: 5rem 0;
 }
-
 
 .container-left {
     max-width: 792px;
@@ -274,8 +251,6 @@ select {
     border: none;
 }
 
-
-
 .container-right {
     margin-top: 100px;
     max-width: 120px;
@@ -289,16 +264,9 @@ select {
     display: block;
 }
 
-
-
-
-
-
 .container-left * {
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><circle cx="25" cy="25" r="25" fill="%23F5F5F5"/><path d="M29.3465 16.8964L22.4419 25.0002L29.3465 33.1039" stroke="%23282830" stroke-width="1.5"/></svg>'), auto;
-
 }
-
 
 .container-middle * {
     cursor: default;
@@ -307,7 +275,6 @@ select {
 .container-right * {
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><circle cx="25" cy="25" r="25" transform="rotate(-180 25 25)" fill="%23F5F5F5"/><path d="M22.4419 16.8964L29.3465 25.0002L22.4419 33.1039" stroke="%23282830" stroke-width="1.5"/></svg>'), auto;
 }
-
 
 .glide__arrow {
     display: none;
@@ -322,7 +289,6 @@ select {
 .main-sgv-carusel-bullet {
     position: relative;
     top: 40px;
-
 }
 
 .main-sgv-carusel-bullet:last-child {
@@ -330,7 +296,6 @@ select {
 }
 
 /* loader overlay */
-
 .loader-overlay {
     position: fixed;
     top: 0;
@@ -338,11 +303,12 @@ select {
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
     z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .loader {
@@ -352,11 +318,10 @@ select {
     width: 50px;
     height: 50px;
     animation: spin 1s linear infinite;
+
 }
 
 /** == == == == ==     4. Animation    == == == == == **/
-
-
 @keyframes draw {
     from {
         stroke-dashoffset: 45.553;
@@ -392,7 +357,6 @@ select {
     transform-origin: 50% 50%;
 }
 
-
 .fade-in-text {
     animation: fadeInText 2s ease-in-out forwards;
 }
@@ -406,7 +370,6 @@ select {
         opacity: 1;
     }
 }
-
 
 .fade-out-text {
     animation: fadeOutText .3s ease-in-out forwards;
@@ -433,9 +396,7 @@ select {
     }
 }
 
-
 /** == == == == ==     4. @ media query    == == == == == **/
-
 @media only screen and (max-width:960px) {
     html {
         scroll-padding-top: 80px;
@@ -457,14 +418,11 @@ select {
         display: none;
     }
 
-
     .toyota-carousel {
         flex-direction: column;
         justify-content: center;
         gap: 50px;
-
     }
-
 
     .container-right {
         display: none;
@@ -482,6 +440,4 @@ select {
     .main-sgv-container {
         justify-content: center;
     }
-
-
 }
