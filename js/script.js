@@ -242,16 +242,25 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", debouncedHandleResize);
 });
 
-//remove loader overlay when page is fully loaded
 // window.addEventListener("load", function () {
 //   const loader = document.getElementById("loader-overlay");
-//   loader.style.display = "none";
+//   // Add a 2-second delay (2000 milliseconds) before hiding the loader
+//   setTimeout(function () {
+//     loader.style.display = "none";
+//   }, 2000);
 // });
 
+// add loader timeout for safary
 window.addEventListener("load", function () {
   const loader = document.getElementById("loader-overlay");
-  // Add a 2-second delay (2000 milliseconds) before hiding the loader
+
+  // Check if the user is using Safari
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+  // Set the timeout duration (2 seconds for Safari, immediately for others)
+  const timeoutDuration = isSafari ? 2500 : 0;
+
   setTimeout(function () {
     loader.style.display = "none";
-  }, 2000);
+  }, timeoutDuration);
 });
